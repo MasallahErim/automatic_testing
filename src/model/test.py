@@ -1,7 +1,7 @@
 # import pickle
 import pandas as pd
 import joblib
-model = joblib.load(open("models/model.pkl", "rb"))
+model = joblib.load(open("./models/model.pkl", "rb"))
 
 X_test  = pd.read_csv("./testdata/X_test.csv")
 
