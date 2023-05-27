@@ -2,7 +2,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 # import pickle
 import joblib
-import os
 import pandas as pd
 
 df = pd.read_csv("./precessed_data.csv")
@@ -19,9 +18,7 @@ reg = LinearRegression().fit(X, y.ravel())
 print(reg.score(X,y.ravel() ))
 
 # Write the model to a file
-if not os.path.isdir("models/"):
-    os.mkdir("models")
-    
+
 
 filename = 'models/model.pkl'
 joblib.dump(reg, open(filename, 'wb'))
@@ -29,8 +26,7 @@ joblib.dump(reg, open(filename, 'wb'))
 
 
 # Write the model to a file
-if not os.path.isdir("testdata/"):
-    os.mkdir("testdata")
+
 X_test = pd.DataFrame(X_test)
 y_test = pd.DataFrame(y_test)
 X_test.to_csv("testdata/X_test.csv")
