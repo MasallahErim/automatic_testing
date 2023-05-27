@@ -1,6 +1,6 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-import pickle
+import pickle5
 import os
 import pandas as pd
 
@@ -23,7 +23,7 @@ if not os.path.isdir("models/"):
     
 
 filename = 'models/model.pkl'
-pickle.dump(reg, open(filename, 'wb'))
+pickle5.dump(reg, open(filename, 'wb'))
 
 
 
