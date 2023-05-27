@@ -41,6 +41,6 @@ df = getdummies_will(df, "ocean_proximity")
 dfs = scale(df)
 
 
-dfs.to_csv("./processed_data/processed_data.csv")
+dfs.to_csv("src/data/processed_data/processed_data.csv")
 
 
