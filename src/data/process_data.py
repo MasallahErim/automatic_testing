@@ -1,6 +1,6 @@
 import pandas as pd 
 from sklearn.preprocessing import StandardScaler
-df = pd.read_csv("housing.csv")
+df = pd.read_csv("a.csv")
 
 
 df.describe().T
