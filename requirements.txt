@@ -5,5 +5,5 @@ matplotlib
 seaborn
 numpy
 # pickle
-os
+os-sys
 joblib
