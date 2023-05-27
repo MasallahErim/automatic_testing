@@ -4,5 +4,6 @@ scikit-learn
 matplotlib
 seaborn
 numpy
-pickle5
+pickle
 os
+joblib
