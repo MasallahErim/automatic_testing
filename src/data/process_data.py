@@ -1,11 +1,11 @@
 import pandas as pd 
 from sklearn.preprocessing import StandardScaler
-df = pd.read_csv("a.csv")
+df = pd.read_csv("./rawdata/housing.csv")
 
 
-df.describe().T
-df.info()
-df["ocean_proximity"].value_counts()
+# df.describe().T
+# df.info()
+# df["ocean_proximity"].value_counts()
 
 
 def deletenullvalue(df):
@@ -41,6 +41,6 @@ df = getdummies_will(df, "ocean_proximity")
 dfs = scale(df)
 
 
-dfs.to_csv("./precesseddata/precessed_data.csv")
+dfs.to_csv("./precesseddata/processed_data.csv")
 
 

@@ -13,9 +13,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           python src/data/process_data.py
-          mv src/data/process_data/processed_data.csv .
+          mv src/data/processed_data.csv .
           python train.py  # generate plot.png
           python test.py  # generate plot.png
           cml comment create report.md
 
- 
