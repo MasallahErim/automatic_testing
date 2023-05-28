@@ -5,11 +5,8 @@ import joblib
 import pandas as pd
 
 df = pd.read_csv("./processed_data.csv")
-
 X = df.drop(columns=["median_house_value","Unnamed: 0"])
 y = df["median_house_value"]
-
-
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
 # Train a model
@@ -20,10 +17,13 @@ print(reg.score(X,y.ravel() ))
 # Write the model to a file
 
 
-filename = './models/model.pkl'
+# filename = 'models/model.pkl'
 
-joblib.dump(reg, filename)
+joblib.dump(reg, "models/model.pkl")
 
+
+# with open(filename, 'wb') as file:  
+#     joblib.dump(reg, file)
 
 
 # Write the model to a file
