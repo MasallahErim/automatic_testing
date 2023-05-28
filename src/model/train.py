@@ -22,7 +22,7 @@ print(reg.score(X,y.ravel() ))
 
 filename = './models/model.pkl'
 
-joblib.dump(reg, open(filename, 'wb'))
+joblib.dump(reg, filename)
 
 
 
