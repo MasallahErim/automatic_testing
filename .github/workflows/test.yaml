@@ -15,5 +15,6 @@ jobs:
           python src/data/process_data.py
           python src/model/train.py  # generate plot.png
           python src/model/test.py  # generate plot.png
+          echo "##tamamlandı" >> report.md
           cml comment create report.md
 
