@@ -1,6 +1,10 @@
 import pandas as pd 
 from sklearn.preprocessing import StandardScaler
+<<<<<<< HEAD
 df = pd.read_csv("./rawdata/housing.csv")
+=======
+df = pd.read_csv("src/data/a.csv")
+>>>>>>> 24c745b0750d2bbf0f6480012239464019dfe649
 
 
 # df.describe().T
@@ -41,6 +45,10 @@ df = getdummies_will(df, "ocean_proximity")
 dfs = scale(df)
 
 
+<<<<<<< HEAD
 dfs.to_csv("./precesseddata/processed_data.csv")
+=======
+dfs.to_csv("processed_data.csv")
+>>>>>>> 24c745b0750d2bbf0f6480012239464019dfe649
 
 
