@@ -1,9 +1,9 @@
 # import pickle
 import pandas as pd
 import joblib
-model = joblib.load(open("./models/model.pkl", "rb"))
+model = joblib.load(open("src/model/models/model.pkl", "rb"))
 
-X_test  = pd.read_csv("./testdata/X_test.csv")
+X_test  = pd.read_csv("src/model/testdata/X_test.csv")
 
 del X_test["Unnamed: 0"]
 
