@@ -17,13 +17,13 @@ print(reg.score(X,y.ravel() ))
 # Write the model to a file
 
 
-filename = './models/model.pkl'
+# filename = 'src/model/models/model.pkl'
 
-# joblib.dump(reg, "models/model.pkl")
+joblib.dump(reg, "src/model/models/model.pkl")
 
 
-with open(filename, 'wb') as file:  
-    joblib.dump(reg, file)
+# with open(filename, 'wb') as file:  
+#     joblib.dump(reg, file)
 
 
 # Write the model to a file
