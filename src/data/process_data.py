@@ -1,7 +1,8 @@
 import pandas as pd 
 from sklearn.preprocessing import StandardScaler
 
-df = pd.read_csv("./rawdata/housing.csv")
+df = pd.read_csv("src/data/rawdata/housing.csv")
+# src/data/rawdata
 # df.describe().T
 # df.info()
 # df["ocean_proximity"].value_counts()
