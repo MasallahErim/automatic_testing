@@ -1,17 +1,10 @@
 import pandas as pd 
 from sklearn.preprocessing import StandardScaler
-<<<<<<< HEAD
+
 df = pd.read_csv("./rawdata/housing.csv")
-=======
-df = pd.read_csv("src/data/a.csv")
->>>>>>> 24c745b0750d2bbf0f6480012239464019dfe649
-
-
 # df.describe().T
 # df.info()
 # df["ocean_proximity"].value_counts()
-
-
 def deletenullvalue(df):
     for key, value in df.isnull().sum().to_dict().items():
         if (value*100/len(df) < 5.0) & value >0:
@@ -37,18 +30,13 @@ def scale(df):
     scale = StandardScaler()
     dfs = pd.DataFrame(scale.fit_transform(df), columns=df.columns)
     return dfs     
-
-
 df = deletenullvalue(df)       
 df = outlierdetect(df)
 df = getdummies_will(df, "ocean_proximity")
 dfs = scale(df)
 
 
-<<<<<<< HEAD
-dfs.to_csv("./precesseddata/processed_data.csv")
-=======
+# dfs.to_csv("./precesseddata/processed_data.csv")
 dfs.to_csv("processed_data.csv")
->>>>>>> 24c745b0750d2bbf0f6480012239464019dfe649
 
 
