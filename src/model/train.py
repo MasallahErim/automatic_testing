@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import joblib
 import pandas as pd
 
-df = pd.read_csv("precessed_data.csv")
+df = pd.read_csv("./processed_data.csv")
 
 X = df.drop(columns=["median_house_value","Unnamed: 0"])
 y = df["median_house_value"]
